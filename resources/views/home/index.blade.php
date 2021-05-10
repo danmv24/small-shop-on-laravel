@@ -152,7 +152,6 @@
                         <div class="product_grid">
 
                             @foreach($products as $product)
-                            <!-- Product -->
                                 @php
                                 $image = '';
                                 if (count($product->images) > 0) {
@@ -165,7 +164,7 @@
                                     <div class="product_image"><img src="images/{{ $image }}" alt="{{ $product->title }}"></div>
                                     <div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
                                     <div class="product_content">
-                                        <div class="product_title"><a href="product.html">{{ $product->title }}</a></div>
+                                        <div class="product_title"><a href="{{ route('showProduct', [$product->id]) }}">{{ $product->title }}</a></div>
                                         <div class="product_price">{{ $product->price }}</div>
                                     </div>
                                 </div>
