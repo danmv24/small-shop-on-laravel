@@ -62,7 +62,7 @@
                     <div class="product_grid">
 
 
-                        @foreach($cat->products as $product)
+                        @foreach($products as $product)
                             @php
                                 $image = '';
                                 if (count($product->images) > 0) {
